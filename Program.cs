@@ -9,14 +9,11 @@ namespace ChessBoard
             // Lets user choose number of squares (in sq) to be output as a chessboard on the screen.
 
             Console.WriteLine("Hej! Hur många rutor ska schackbrädet ha? ");
-            Board();
 
-            void Board()
-            {
-                int chosenNum;
-                while (int.TryParse(Console.ReadLine(), out chosenNum) == false) //changes users string input to int, if it's an integer.
+            int chosenNum;
+                while (int.TryParse(Console.ReadLine(), out chosenNum) == false) //converts users string input to int, if it is possible.
                 {
-                    Console.WriteLine("Skriv ett heltal istället."); //If chosenNum is not an integer, user is asked to try again.
+                    Console.WriteLine("Vänligen skriv ett heltal istället."); //If chosenNum is not an integer, user is asked to try again.
                 }
 
                 Console.OutputEncoding = System.Text.Encoding.Unicode;
@@ -41,4 +38,3 @@ namespace ChessBoard
             }
         }
     }
-}
