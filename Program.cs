@@ -6,6 +6,8 @@ namespace ChessBoard
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+
             // Lets user choose number of squares (in sq) to be output as a chessboard on the screen.
 
             Console.WriteLine("Hej! Hur många rutor ska schackbrädet ha? ");
@@ -24,15 +26,12 @@ namespace ChessBoard
             //puts out squares if the user answer "black" or/and "white"
             if (black == "svart")
             {
-
                 black = "◼︎";
             }
             if (white == "vit")
             {
                 white = "◻︎";
             }
-
-            Console.OutputEncoding = System.Text.Encoding.Unicode;
 
             //Nested for-loop that creates rows and columns
 
