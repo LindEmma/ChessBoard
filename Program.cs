@@ -16,6 +16,22 @@ namespace ChessBoard
                 Console.WriteLine("Vänligen skriv ett heltal istället."); //If chosenNum is not an integer, user is asked to try again.
             }
 
+            Console.WriteLine("Vilken symbol ska representera svart?");
+            string black = Console.ReadLine();
+            Console.WriteLine("Vilken symbol ska representera vit?");
+            string white = Console.ReadLine();
+
+            //puts out squares if the user answer "black" or/and "white"
+            if (black == "svart")
+            {
+
+                black = "◼︎";
+            }
+            if (white == "vit")
+            {
+                white = "◻︎";
+            }
+
             Console.OutputEncoding = System.Text.Encoding.Unicode;
 
             //Nested for-loop that creates rows and columns
@@ -26,11 +42,11 @@ namespace ChessBoard
                 {
                     if ((row + column) % 2 == 0) //Checks if the number of squares are even
                     {
-                        Console.Write("◻︎"); //outputs white if they are even
+                        Console.Write(white); //outputs white if they are even
                     }
                     else
                     {
-                        Console.Write("◼︎"); // else black square
+                        Console.Write(black); // else black square
                     }
                 }
                 Console.WriteLine(); //Switch to a new line
