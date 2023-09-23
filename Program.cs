@@ -24,9 +24,9 @@ namespace ChessBoard
             {
                 for (int column = 1; column <= chosenNum; column++) //Loops the columns
                 {
-                    if ((row + column) % 2 == 0) //Checks if the cells are even
+                    if ((row + column) % 2 == 0) //Checks if the number of squares are even
                     {
-                        Console.Write("◻︎"); //outputs white if the cells are even
+                        Console.Write("◻︎"); //outputs white if they are even
                     }
                     else
                     {
